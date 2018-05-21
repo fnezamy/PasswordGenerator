@@ -21,7 +21,24 @@ public class Anaylsis {
 		return "Entropy is : "+ df.format(result.getEntropy())+'\n'+timeToCrackOff+'\n'+timeToCrackOn;
 	}
 	
-	public void bestpass(String myGenerated, String pwdGenerated, String wordGenerated, String u, String sentanceg){
+	public String Entropy(String s){
+		Result r = nbvcxz.estimate(s);
+		DecimalFormat df = new DecimalFormat("#.##");
+		return df.format(r.getEntropy());
+	}
+	
+	public String Crack1(String s){
+		Result r = nbvcxz.estimate(s);
+		return TimeEstimate.getTimeToCrackFormatted(r,"OFFLINE_BCRYPT_12");
+	}
+	
+	public String Crack2(String s){
+		Result r = nbvcxz.estimate(s);
+		return TimeEstimate.getTimeToCrackFormatted(r, "ONLINE_THROTTLED");
+	}
+	
+	
+	public String bestpass(String myGenerated, String pwdGenerated, String wordGenerated, String u, String sentanceg){
 		
 		Result myGen = nbvcxz.estimate(myGenerated);
 		Result pwdGen = nbvcxz.estimate(pwdGenerated);
@@ -30,19 +47,19 @@ public class Anaylsis {
 		Result sentanceGen = nbvcxz.estimate(sentanceg);
 		//comparing doubles is bad practice
 		if(myGen.getEntropy()>pwdGen.getEntropy() && myGen.getEntropy()>wordGen.getEntropy() && myGen.getEntropy()>userGen.getEntropy()){
-			System.out.println("My generated password has the highest entropy");
+			return "My generated password has the highest entropy";
 		}
 		else if(pwdGen.getEntropy()>myGen.getEntropy() && pwdGen.getEntropy()>wordGen.getEntropy() && pwdGen.getEntropy()>userGen.getEntropy()){
-			System.out.println("Pwd generated password has the highest entropy");
+			return "Pwd generated password has the highest entropy";
 		}
 		else if(wordGen.getEntropy()>userGen.getEntropy()){
-			System.out.println("Word generated password has the highest entropy");
+			return "Word generated password has the highest entropy";
 		}
 		else if(userGen.getEntropy()>sentanceGen.getEntropy()){
-			System.out.println("User Generated password has the highest entropy");
+			return "User Generated password has the highest entropy";
 		}
 		else{
-			System.out.println("Sentance generated password has the highest entropy");
+			return "Sentance generated password has the highest entropy";
 		}
 	}
 	
