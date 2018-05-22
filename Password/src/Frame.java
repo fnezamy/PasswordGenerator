@@ -38,32 +38,22 @@ public class Frame {
 	private JTextField UserGenEntropy;
 	private JTextField UserGenCrack1;
 	private JTextField UserGenCrack2;
-	private JTextField UserGenDis;
 	private JTextField RandomGenAnalysis;
 	private JTextField RandomGenEntropy;
 	private JTextField RandomCrack1;
 	private JTextField RandomCrack2;
-	private JTextField RandomAdv;
-	private JTextField RandomDis;
 	private JTextField SentenceGenAnalysis;
 	private JTextField SentenceEntropy;
 	private JTextField SentenceCrack1;
 	private JTextField SentenceCrack2;
-	private JTextField SentenceAdv;
-	private JTextField SentenceDis;
-	private JTextField UserGenAdv;
 	private JTextField OtherGen1Analysis;
 	private JTextField Gen1Entropy;
 	private JTextField Gen1Crack1;
 	private JTextField Gen1Crack2;
-	private JTextField Gen1Adv;
-	private JTextField Gen1Dis;
 	private JTextField OtherGen2Analysis;
 	private JTextField OtherGen2Entropy;
 	private JTextField OtherGen2Crack1;
 	private JTextField OtherGen2Crack2;
-	private JTextField OtherGen2Adv;
-	private JTextField OtherGen2Dis;
 	private JTextField HighestEntropy;
 	private JTextField UserMem;
 
@@ -468,23 +458,9 @@ public class Frame {
 		label_20.setBounds(682, 132, 221, 42);
 		UserMemorability.add(label_20);
 		
-		UserGenAdv = new JTextField();
-		UserGenAdv.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		UserGenAdv.setText("User Memorability, Strong Entropy...");
-		UserGenAdv.setColumns(10);
-		UserGenAdv.setBounds(918, 190, 297, 26);
-		UserMemorability.add(UserGenAdv);
-		
-		UserGenDis = new JTextField();
-		UserGenDis.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		UserGenDis.setText("Weak to Dictionary Attacks");
-		UserGenDis.setColumns(10);
-		UserGenDis.setBounds(918, 231, 297, 26);
-		UserMemorability.add(UserGenDis);
-		
 		JLabel label_22 = new JLabel("Disadvantages");
 		label_22.setFont(new Font("Tahoma", Font.PLAIN, 32));
-		label_22.setBounds(682, 220, 221, 34);
+		label_22.setBounds(1034, 233, 221, 34);
 		UserMemorability.add(label_22);
 		
 		JLabel label_23 = new JLabel("User Generated");
@@ -494,7 +470,7 @@ public class Frame {
 		
 		JLabel label_24 = new JLabel("Advantages");
 		label_24.setFont(new Font("Tahoma", Font.PLAIN, 32));
-		label_24.setBounds(682, 178, 209, 37);
+		label_24.setBounds(711, 232, 209, 37);
 		UserMemorability.add(label_24);
 		
 		JPanel UserGraph = new JPanel();
@@ -585,6 +561,21 @@ public class Frame {
 		lblYes_8.setBounds(544, 80, 30, 26);
 		panel_3.add(lblYes_8);
 		
+		JLabel lblUserMemorability = new JLabel("-User Memorability");
+		lblUserMemorability.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblUserMemorability.setBounds(731, 285, 172, 26);
+		UserMemorability.add(lblUserMemorability);
+		
+		JLabel lblhighEntropy = new JLabel("-High Entropy");
+		lblhighEntropy.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblhighEntropy.setBounds(731, 325, 172, 26);
+		UserMemorability.add(lblhighEntropy);
+		
+		JLabel lblNewLabel = new JLabel("-Weak to specific attacks such as a dictionary attack");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel.setBounds(1034, 281, 493, 57);
+		UserMemorability.add(lblNewLabel);
+		
 		
 		
 		JPanel panel_6 = new JPanel();
@@ -635,20 +626,6 @@ public class Frame {
 		label_28.setBounds(237, 137, 0, 0);
 		panel_6.add(label_28);
 		
-		RandomAdv = new JTextField();
-		RandomAdv.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		RandomAdv.setText("User Memorability, Strong Entropy...");
-		RandomAdv.setColumns(10);
-		RandomAdv.setBounds(927, 192, 297, 26);
-		panel_6.add(RandomAdv);
-		
-		RandomDis = new JTextField();
-		RandomDis.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		RandomDis.setText("Weak to Dictionary Attacks");
-		RandomDis.setColumns(10);
-		RandomDis.setBounds(927, 234, 297, 26);
-		panel_6.add(RandomDis);
-		
 		JLabel label_29 = new JLabel("Disadvantages");
 		label_29.setBounds(237, 137, 0, 0);
 		panel_6.add(label_29);
@@ -679,12 +656,12 @@ public class Frame {
 		
 		JLabel label_36 = new JLabel("Advantages");
 		label_36.setFont(new Font("Tahoma", Font.PLAIN, 32));
-		label_36.setBounds(704, 174, 193, 45);
+		label_36.setBounds(704, 213, 193, 45);
 		panel_6.add(label_36);
 		
 		JLabel label_37 = new JLabel("Disadvantages");
 		label_37.setFont(new Font("Tahoma", Font.PLAIN, 32));
-		label_37.setBounds(704, 216, 234, 48);
+		label_37.setBounds(976, 211, 234, 48);
 		panel_6.add(label_37);
 		
 		JPanel RandomGraph = new JPanel();
@@ -778,6 +755,26 @@ public class Frame {
 		lblYes_1.setBounds(544, 80, 30, 26);
 		RandomMemorability.add(lblYes_1);
 		
+		JLabel lblNewLabel_1 = new JLabel("-High Entropy");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_1.setBounds(693, 283, 240, 43);
+		panel_6.add(lblNewLabel_1);
+		
+		JLabel lblCanChooseNumber = new JLabel("-Can choose number of characters");
+		lblCanChooseNumber.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblCanChooseNumber.setBounds(693, 342, 305, 43);
+		panel_6.add(lblCanChooseNumber);
+		
+		JLabel lblNoUserMemorability = new JLabel("-No User Memorability");
+		lblNoUserMemorability.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNoUserMemorability.setBounds(1013, 289, 240, 43);
+		panel_6.add(lblNoUserMemorability);
+		
+		JLabel lblNewLabel_2 = new JLabel("-No limits on characters, i.e string could be all lowercase");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_2.setBounds(1013, 323, 518, 81);
+		panel_6.add(lblNewLabel_2);
+		
 		
 		
 		JPanel panel_7 = new JPanel();
@@ -817,20 +814,6 @@ public class Frame {
 		SentenceCrack2.setBounds(931, 195, 297, 26);
 		panel_7.add(SentenceCrack2);
 		
-		SentenceAdv = new JTextField();
-		SentenceAdv.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		SentenceAdv.setText("");
-		SentenceAdv.setColumns(10);
-		SentenceAdv.setBounds(931, 249, 297, 26);
-		panel_7.add(SentenceAdv);
-		
-		SentenceDis = new JTextField();
-		SentenceDis.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		SentenceDis.setText("");
-		SentenceDis.setColumns(10);
-		SentenceDis.setBounds(931, 291, 297, 26);
-		panel_7.add(SentenceDis);
-		
 		JLabel label_39 = new JLabel("Entropy");
 		label_39.setFont(new Font("Tahoma", Font.PLAIN, 32));
 		label_39.setBounds(692, 124, 172, 31);
@@ -848,12 +831,12 @@ public class Frame {
 		
 		JLabel label_43 = new JLabel("Advantages");
 		label_43.setFont(new Font("Tahoma", Font.PLAIN, 32));
-		label_43.setBounds(692, 239, 214, 37);
+		label_43.setBounds(692, 277, 214, 37);
 		panel_7.add(label_43);
 		
 		JLabel label_44 = new JLabel("Disadvantages");
 		label_44.setFont(new Font("Tahoma", Font.PLAIN, 32));
-		label_44.setBounds(692, 278, 244, 39);
+		label_44.setBounds(1053, 276, 244, 39);
 		panel_7.add(label_44);
 		
 		JPanel SentenceGraph = new JPanel();
@@ -946,6 +929,26 @@ public class Frame {
 		lblYes_3.setBounds(544, 80, 30, 26);
 		panel_8.add(lblYes_3);
 		
+		JLabel lblNewLabel_3 = new JLabel("-High Entropy");
+		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_3.setBounds(702, 344, 162, 39);
+		panel_7.add(lblNewLabel_3);
+		
+		JLabel lblhighUserMemorability = new JLabel("-High User Memorability");
+		lblhighUserMemorability.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblhighUserMemorability.setBounds(702, 399, 224, 39);
+		panel_7.add(lblhighUserMemorability);
+		
+		JLabel label_14 = new JLabel("");
+		label_14.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		label_14.setBounds(1053, 344, 162, 39);
+		panel_7.add(label_14);
+		
+		JLabel lblcomplexPasswordBecause = new JLabel("-Complex password because words are all unrelated");
+		lblcomplexPasswordBecause.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblcomplexPasswordBecause.setBounds(702, 452, 489, 39);
+		panel_7.add(lblcomplexPasswordBecause);
+		
 		
 		
 		JPanel panel = new JPanel();
@@ -990,20 +993,6 @@ public class Frame {
 		Gen1Crack2.setBounds(903, 96, 297, 26);
 		panel_1.add(Gen1Crack2);
 		
-		Gen1Adv = new JTextField();
-		Gen1Adv.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		Gen1Adv.setText("");
-		Gen1Adv.setColumns(10);
-		Gen1Adv.setBounds(903, 125, 297, 26);
-		panel_1.add(Gen1Adv);
-		
-		Gen1Dis = new JTextField();
-		Gen1Dis.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		Gen1Dis.setText("");
-		Gen1Dis.setColumns(10);
-		Gen1Dis.setBounds(903, 162, 297, 26);
-		panel_1.add(Gen1Dis);
-		
 		JLabel label_5 = new JLabel("Entropy");
 		label_5.setFont(new Font("Tahoma", Font.PLAIN, 28));
 		label_5.setBounds(671, 3, 128, 43);
@@ -1021,12 +1010,12 @@ public class Frame {
 		
 		JLabel label_9 = new JLabel("Advantages");
 		label_9.setFont(new Font("Tahoma", Font.PLAIN, 28));
-		label_9.setBounds(671, 110, 192, 46);
+		label_9.setBounds(610, 130, 149, 46);
 		panel_1.add(label_9);
 		
 		JLabel label_10 = new JLabel("Disadvantages");
 		label_10.setFont(new Font("Tahoma", Font.PLAIN, 28));
-		label_10.setBounds(671, 144, 192, 52);
+		label_10.setBounds(1047, 127, 192, 52);
 		panel_1.add(label_10);
 		
 		JPanel OtherGen1Graph = new JPanel();
@@ -1118,29 +1107,15 @@ public class Frame {
 		label_13.setBounds(653, 395, 206, 26);
 		panel_1.add(label_13);
 		
-		OtherGen2Adv = new JTextField();
-		OtherGen2Adv.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		OtherGen2Adv.setText("");
-		OtherGen2Adv.setColumns(10);
-		OtherGen2Adv.setBounds(903, 427, 297, 26);
-		panel_1.add(OtherGen2Adv);
-		
 		JLabel label_15 = new JLabel("Advantages");
 		label_15.setFont(new Font("Tahoma", Font.PLAIN, 28));
-		label_15.setBounds(657, 424, 206, 26);
+		label_15.setBounds(610, 456, 206, 35);
 		panel_1.add(label_15);
 		
 		JLabel label_16 = new JLabel("Disadvantages");
 		label_16.setFont(new Font("Tahoma", Font.PLAIN, 28));
-		label_16.setBounds(657, 456, 206, 35);
+		label_16.setBounds(1047, 456, 206, 35);
 		panel_1.add(label_16);
-		
-		OtherGen2Dis = new JTextField();
-		OtherGen2Dis.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		OtherGen2Dis.setText("");
-		OtherGen2Dis.setColumns(10);
-		OtherGen2Dis.setBounds(903, 465, 297, 26);
-		panel_1.add(OtherGen2Dis);
 		
 		JButton button_11 = new JButton("Generate");
 		button_11.addActionListener(new ActionListener() {
@@ -1279,6 +1254,41 @@ public class Frame {
 		panel_1.add(label_11);
 		label_11.setFont(new Font("Tahoma", Font.PLAIN, 28));
 		
+		JLabel lblNewLabel_4 = new JLabel("-High Entropy");
+		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblNewLabel_4.setBounds(773, 130, 128, 20);
+		panel_1.add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_5 = new JLabel("-At least one capital, lowercase,");
+		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblNewLabel_5.setBounds(774, 150, 258, 26);
+		panel_1.add(lblNewLabel_5);
+		
+		JLabel lblNumberAndSymbol = new JLabel("number, and symbol");
+		lblNumberAndSymbol.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblNumberAndSymbol.setBounds(779, 178, 183, 23);
+		panel_1.add(lblNumberAndSymbol);
+		
+		JLabel lbllowUserMemorability = new JLabel("-Low User Memorability");
+		lbllowUserMemorability.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lbllowUserMemorability.setBounds(1254, 130, 206, 20);
+		panel_1.add(lbllowUserMemorability);
+		
+		JLabel label_8 = new JLabel("-High Entropy");
+		label_8.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		label_8.setBounds(762, 437, 128, 20);
+		panel_1.add(label_8);
+		
+		JLabel lblgoodUserMemorability = new JLabel("-Good User Memorability");
+		lblgoodUserMemorability.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblgoodUserMemorability.setBounds(762, 468, 214, 20);
+		panel_1.add(lblgoodUserMemorability);
+		
+		JLabel lbleasyToCrack = new JLabel("-Easy to crack with a dictionary attack");
+		lbleasyToCrack.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lbleasyToCrack.setBounds(1238, 456, 313, 20);
+		panel_1.add(lbleasyToCrack);
+		
 
 		
 		JPanel panel_2 = new JPanel();
@@ -1305,6 +1315,7 @@ public class Frame {
 		UserMem.setBounds(330, 105, 496, 30);
 		panel_2.add(UserMem);
 		
+		UserMem.setText("Sentance Generated has the highest User Memorability");
 		JButton button_12 = new JButton("Generate");
 		button_12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
